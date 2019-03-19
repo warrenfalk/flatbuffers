@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Description>C# runtime library for FlatBuffers - Google's high performance cross-platform serialization library</Description>
+    <AssemblyTitle>Google FlatBuffers</AssemblyTitle>
+    <VersionPrefix>1.10.0</VersionPrefix>
+    <Authors>Google Inc.</Authors>
     <TargetFrameworks>netstandard1.1;netstandard1.4;netstandard2.0;net45</TargetFrameworks>
     <RootNamespace>FlatBuffers</RootNamespace>
     <AssemblyName>FlatBuffers</AssemblyName>
@@ -10,7 +14,18 @@
     <PackageLicenseUrl>https://github.com/google/flatbuffers/blob/master/LICENSE.txt</PackageLicenseUrl>
   </PropertyGroup>
 
+  <!-- 
+    - Override target frameworks on non-Windows to just .NET Core
+    - Doing this conditionally in the initial PropertyGroup confuses
+    - Visual Studio.
+    -->
+  <PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
+    <TargetFrameworks>netstandard1.1;netstandard1.4;netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
   <ItemGroup>
+    <PackageReference Include="SourceLink.Create.CommandLine" PrivateAssets="All" Version="2.7.6"/>
     <PackageReference Include="System.Memory" Version="4.5.1" />
   </ItemGroup>
+
 </Project>
