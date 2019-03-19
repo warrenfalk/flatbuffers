@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <flatc_tools>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/../tools/'))</flatc_tools>
+        <flatc_linux64>$([System.IO.Path]::GetFullPath('$(flatc_tools)/linux_x64/flatc'))</flatc_linux64>
+        <flatc_linux86>$([System.IO.Path]::GetFullPath('$(flatc_tools)/linux_x86/flatc'))</flatc_linux86>
+        <flatc_macosx64>$([System.IO.Path]::GetFullPath('$(flatc_tools)/macosx_x64/flatc'))</flatc_macosx64>
+        <flatc_macosx86>$([System.IO.Path]::GetFullPath('$(flatc_tools)/macosx_x86/flatc'))</flatc_macosx86>
+        <flatc_windows64>$([System.IO.Path]::GetFullPath('$(flatc_tools)/windows_x64/flatc.exe'))</flatc_windows64>
+        <flatc_windows86>$([System.IO.Path]::GetFullPath('$(flatc_tools)/windows_x86/flatc.exe'))</flatc_windows86>
+    </PropertyGroup>
+</Project>

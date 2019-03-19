@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+  <metadata>
+    <id>FlatBuffers.Tools</id>
+    <title>Google FlatBuffers tools</title>
+    <summary>Tools for FlatBuffers - Google's high performance cross-platform serialization library</summary>
+    <description>See project site for more info.</description>
+    <version>1.10.0</version>
+    <authors>Google Inc.</authors>
+    <licenseUrl>https://github.com/google/flatbuffers/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/google/flatbuffers</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>Tools for FlatBuffers</releaseNotes>
+    <copyright>Copyright 2015, Google Inc.</copyright>
+    <tags>FlatBuffers FlatBuffer Binary Serialization Format Google FPL</tags>
+  </metadata>
+  <files>
+    <file src="flatc\windows_x86\flatc.exe" target="tools\windows_x86\flatc.exe"/>
+    <file src="flatc\windows_x64\flatc.exe" target="tools\windows_x64\flatc.exe"/>
+    <file src="flatc\linux_x86\flatc" target="tools\linux_x86\flatc"/>
+    <file src="flatc\linux_x64\flatc" target="tools\linux_x64\flatc"/>
+    <file src="flatc\macosx_x64\flatc" target="tools\macosx_x64\flatc"/>
+    <file src="..\reflection\reflection.fbs" target="tools\reflection"/>
+    <file src="FlatBuffers.Tools.targets" target="buildCrossTargeting"/>
+    <file src="FlatBuffers.Tools.targets" target="build"/>
+  </files>
+</package>
